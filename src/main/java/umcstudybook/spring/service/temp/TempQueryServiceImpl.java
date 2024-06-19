@@ -1,9 +1,9 @@
-package umcstudybook.spring.service.Impl;
+package umcstudybook.spring.service.temp;
 
 import org.springframework.stereotype.Service;
 import umcstudybook.spring.apiPayload.code.status.ErrorStatus;
 import umcstudybook.spring.apiPayload.exception.handler.TempHandler;
-import umcstudybook.spring.service.TempQueryService;
+import umcstudybook.spring.service.temp.TempQueryService;
 
 @Service
 public class TempQueryServiceImpl implements TempQueryService {
