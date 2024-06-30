@@ -1,8 +1,11 @@
 package umcstudybook.spring.converter;
 
+import umcstudybook.spring.domain.Review;
 import umcstudybook.spring.domain.Store;
 import umcstudybook.spring.web.dto.StoreRequestDTO;
 import umcstudybook.spring.web.dto.StoreResponseDTO;
+
+import java.time.LocalDateTime;
 
 public class StoreConverter {
 
@@ -18,6 +21,13 @@ public class StoreConverter {
         return StoreResponseDTO.JoinResultDTO.builder()
                 .id(store.getId())
                 .createdAt(store.getCreatedAt())
+                .build();
+    }
+
+    public static StoreResponseDTO.JoinResultDTO toJoinResultDTO(Review review){
+        return StoreResponseDTO.JoinResultDTO.builder()
+                .id(review.getId())
+                .createdAt(LocalDateTime.now())
                 .build();
     }
 }
